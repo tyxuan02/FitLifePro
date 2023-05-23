@@ -14,6 +14,8 @@ class MultiApp:
         })
 
     def run(self):
+        st.markdown("""---""")
+
         # Get the selected option
         selected = option_menu(
             menu_title=None,
@@ -23,7 +25,10 @@ class MultiApp:
             orientation="horizontal"
         )
 
+        st.markdown("""---""")
+
         # Call the selected function
         for app in self.apps:
             if app["title"] == selected:
                 app["function"]()
+        

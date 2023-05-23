@@ -1,22 +1,9 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from experta import Rule, Fact, KnowledgeEngine
-
-class InjuryType(Fact):
-    """Info about the injury type"""
-    pass
-
-class CommonInjury(KnowledgeEngine):
-    @Rule(InjuryType(injury_type='Sprain'))
-    def sprain(self):
-        st.write("Sprain")
-
-    @Rule(InjuryType(injury_type='Strain'))
-    def strain(self):
-        st.write("Strain")
-
+from rules.injury_tab_rules import CommonInjury, InjuryType, PreventionType, Prevention
 
 def app():
+    # Sidebar
     with st.sidebar:
         selected = option_menu(
             menu_title=None,
@@ -26,17 +13,25 @@ def app():
         )
 
     if selected == "Common Injury":
-        st.markdown("""<h2 style="text-align: center;">Common Injury</h2>""", unsafe_allow_html=True)
+        st.markdown("""<h1 style="text-align: center;">Common Injury</h1>""", unsafe_allow_html=True)
+        injury = st.selectbox(" ", ["Sprain", "Strain", "Knee Injury", "Fractures", "Muscle Cramps", "Nose Injuries", "Bruises", "Cuts and Abrasions", "Dental Damage", "Dislocations"])
 
-        st.markdown("""<h4>Select the type of injury</h4>""", unsafe_allow_html=True)
-        injury = st.selectbox("", ["Sprain", "Strain"])
-
+        # Run the CommonInjury engine
         engine = CommonInjury()
         engine.reset()
         engine.declare(InjuryType(injury_type=injury))
         engine.run()
 
     elif selected == "Treatment":
-        st.write("Treatment")
+        st.markdown("""<h1 style="text-align: center;">Treatment</h1>""", unsafe_allow_html=True)
+        injury = st.selectbox(" ", [])
+
     elif selected == "Prevention":
-        st.write("Prevention")
+        st.markdown("""<h1 style="text-align: center;">Prevention</h1>""", unsafe_allow_html=True)
+        prevention = st.selectbox(" ", ["Always Warm Up Beforehand", "Exercise Regularly", "Do not Push Your Body Beyond Its Limits", "Use the Proper Technique", "Have the Proper Equipment", "Cool Down", "Resume Activity Slowly"])
+
+        # Run the Prevention engine
+        engine = Prevention()
+        engine.reset()
+        engine.declare(PreventionType(prevention_type=prevention))
+        engine.run()

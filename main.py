@@ -18,4 +18,4 @@ app.add_app("Home", Home.app)
 app.add_app("Sports", Sports.app)
 app.add_app("Injury", Injury.app)
 # The main app
-app.run()   
+app.run() 
