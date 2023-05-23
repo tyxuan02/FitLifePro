@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from rules.injury_tab_rules import CommonInjury, InjuryType, PreventionType, Prevention
+from rules.injury_tab_rules import CommonInjury, InjuryType, TreatmentType, Treatment, PreventionType, Prevention
 
 def app():
     # Sidebar
@@ -24,7 +24,13 @@ def app():
 
     elif selected == "Treatment":
         st.markdown("""<h1 style="text-align: center;">Treatment</h1>""", unsafe_allow_html=True)
-        injury = st.selectbox(" ", [])
+        injury = st.selectbox(" ", ["First Aid for Sprains, Strains and Joint Injuries", "First Aid for Nose Bleeds", "First Aid for Disldodged Teeth", "Emergency Situation"])
+
+        # Run the Treatment engine
+        engine = Treatment()
+        engine.reset()
+        engine.declare(TreatmentType(treatment_type=injury))
+        engine.run()
 
     elif selected == "Prevention":
         st.markdown("""<h1 style="text-align: center;">Prevention</h1>""", unsafe_allow_html=True)

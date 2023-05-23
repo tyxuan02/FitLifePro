@@ -103,8 +103,76 @@ class CommonInjury(KnowledgeEngine):
 # ------------------------------------------------------------
     
 # Treatment Type Fact
-# Treatment Knowledge Engine
+class TreatmentType(Fact):
+    """Info about the treatment type"""
+    pass
 
+# Treatment Knowledge Engine
+class Treatment(KnowledgeEngine):
+    @Rule(TreatmentType(treatment_type='First Aid for Sprains, Strains and Joint Injuries'))
+    def first_aid_for_sprains_strains_and_joint_injuries(self):
+        st.markdown("""<h2 style="text-align: center;">First Aid for Sprains, Strains and Joint Injuries</h2>""", unsafe_allow_html=True)
+        image = Image.open('images/first-aid-for-sprains-strains-and-joint-injuries.png')
+        st.image(image, use_column_width=True)
+        st.markdown("""<strong style="text-style: bold; font-size: 20px;"><span style="color: red;">R.I.C.E</span> method. This treatment method is helpful for mild sports injuries. For best results, follow the RICE method within the first 24 to 36 hours after the injury. It can help reduce swelling 
+        and prevent additional pain and bruising in the early days after a sports injury.
+        <br><br>
+        Here's the step-by-step guide on the RICE method:
+        <br>
+        <br>→ <span style="color: red;">Rest</span> – Keep the injured area supported and avoid using for 48-72 hours.
+        <br>→ <span style="color: red;">Ice</span> – Apply ice to the injured area for 20 minutes every two hours for the first 48-72 hours.
+        <br>→ <span style="color: red;">Compression</span> – Apply a firm elastic bandage over the area, extending above and below the painful site.
+        <br>→ <span style="color: red;">Elevation</span> – Raise the injured area above the level of the heart at all times.
+        </strong>""", unsafe_allow_html=True)
+        
+    @Rule(TreatmentType(treatment_type='First Aid for Nose Bleeds'))
+    def first_aid_for_nose_bleeds(self):
+        st.markdown("""<h2 style="text-align: center;">First Aid for Nose Bleeds</h2>""", unsafe_allow_html=True)
+        image = Image.open('images/first-aid-for-nose-bleeds.jpg')
+        st.image(image, use_column_width=True)
+        st.markdown("""<strong style="text-style: bold; font-size: 20px;">
+        Here's the step-by-step guide on how to stop a nose bleed:
+        <br><br>→ Stop the activity.
+        <br>→ Sit with your head leaning forward.
+        <br>→ Pinch your nostrils together and breathe through your mouth.
+        <br>→ Hold your nose for at least 10 minutes.
+        <br>→ If bleeding continues past 30 minutes, seek medical advice.</strong>""", unsafe_allow_html=True)
+
+    @Rule(TreatmentType(treatment_type='First Aid for Disldodged Teeth'))
+    def first_aid_for_dislodged_teeth(self):
+        st.markdown("""<h2 style="text-align: center;">First Aid for Disldodged Teeth</h2>""", unsafe_allow_html=True)
+        image = Image.open('images/first-aid-for-dislodged-teeth.jpg')
+        st.image(image, use_column_width=True)
+        st.markdown("""<strong style="text-style: bold; font-size: 20px;">
+        Here's the step-by-step guide on how to handle a dislodged tooth:
+        <br><br>→ Handle your tooth by the top or crown only — don't touch the roots.
+        <br>→ Inspect the crown and root to determine if any portion of either appears to be missing or fractured.
+        <br>→ Don't rub the tooth or scrape it to remove debris. This damages the root surface, making the tooth less likely to survive.
+        <br>→ If your tooth has dirt or foreign material on it, gently rinse your tooth briefly — no more than 10 seconds — in a bowl of lukewarm tap water to remove the debris. Don't hold it under running water, because too much tap water could kill the cells on the root surface that help reattach the tooth.
+        <br>→ Try to put your tooth back in the socket. If it doesn't go all the way into place, bite down slowly and gently on gauze or a moistened paper towel to help keep it in place. Hold the tooth in place until you see your dentist.
+        <br>→ If you can't put your tooth back in the socket, immediately place it between your cheek and gum, or in cold milk or your own saliva. Or use an over-the-counter product that preserves a knocked-out tooth, such as those approved by the American Dental Association, if you have quick access to it.
+        <br>→ Get emergency dental care. If your dentist's office isn't open, go to the emergency room.</strong>""", 
+        unsafe_allow_html=True)
+    
+    @Rule(TreatmentType(treatment_type='Emergency Situation'))
+    def emergency_situation(self):
+        st.markdown("""<h2 style="text-align: center;">Emergency Situation</h2>""", unsafe_allow_html=True)
+        image = Image.open('images/emergency-situation.png')
+        st.image(image, use_column_width=True)
+        st.markdown("""<strong style="text-style: bold; font-size: 20px;">
+        Call ambulance for:
+        <br><br>→ Prolonged Loss of Consciousness
+        <br>→ Neck or Spine Injuries
+        <br>→ Broken Bones
+        <br>→ Injuries to the Head or Face
+        <br>→ Eye Injuries
+        <br>→ Abdominal Injuries
+        <br>→ Difficulty Breathing
+        <br>→ Dizziness
+        <br>→ Severe Pain
+        <br>→ Severe Bleeding
+        </strong>""", unsafe_allow_html=True)
+        
 
 # ------------------------------------------------------------
 
