@@ -4,6 +4,7 @@ from apps import Home, Injury, Sports # import your app modules here
 
 st.set_page_config(page_title="FitLifePro", page_icon="💖", layout="wide")
 
+
 st.markdown(
     """
     <h1 style="text-align: center; font-size: 60px;">FitLifePro</h1>

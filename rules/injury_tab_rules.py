@@ -276,6 +276,8 @@ class Prevention(KnowledgeEngine):
         increase the risk of re-injury. Instead, taking a slow and gradual approach allows your body to heal and adapt, and reduce the likelihood of setbacks. By gradually increasing the intensity, duration, and complexity of your activities, you give your body 
         time to rebuild strength, flexibility, and coordination in the affected area. This gradual return also allows you to closely monitor your body's response by making adjustments as needed and ensuring a safe and successful 
         recovery.</strong>""", unsafe_allow_html=True)
+
+
         
 
 
