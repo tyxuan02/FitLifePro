@@ -7,6 +7,10 @@ class TeamSportsType(Fact):
     """Info about the sport type"""
     pass
 
+class IndividualSportsType(Fact):
+    """Info about the sport type"""
+    pass
+
 # Team Sports Knowledge Engine
 class TeamSports(KnowledgeEngine):
     @Rule(TeamSportsType(teamSports_type='Football'))
@@ -90,3 +94,106 @@ class TeamSports(KnowledgeEngine):
                         <li> :red[Scoring:] A goal is scored when the ball completely crosses the goal line between the goalposts and under the crossbar. The team with the most goals at the end of the game wins.</li>
                     </ol>
                     </strong>""", unsafe_allow_html=True)
+
+
+# Individual Sports Knowledge Engine
+class IndividualSports(KnowledgeEngine):
+    @Rule(IndividualSportsType(individualSports_type='Swimming'))
+    def Swimming(self):
+        st.markdown("""<h3 style="text-align: center;">Swimming</h3>""", unsafe_allow_html=True)
+        image = Image.open('images/images_sport/swimming.jpg')
+        st.image(image, use_column_width=True)
+        st.markdown("""<strong style="text-style: bold; font-size: 20px;">Swimming is a popular individual sport and recreational activity that involves propelling oneself through water using arm and leg movements. 
+                    The sport encompasses different swimming strokes, each with its own technique and style. The main swimming strokes include freestyle, backstroke, breaststroke, and butterfly.
+                    <br><br>
+                    Advantages of Swimming:
+                    <ol>
+                        <li> :blue[Full-body workout:] Swimming engages multiple muscle groups, providing a comprehensive workout for the arms, legs, core, and back.</li>
+                        <li> :blue[Cardiovascular fitness:] Swimming increases heart rate and improves cardiovascular endurance, enhancing overall cardiovascular health.</li>
+                        <li> :blue[Low-impact exercise:] The buoyancy of water reduces stress on joints, making swimming a low-impact activity suitable for individuals with joint pain or injuries.</li>
+                        <li> :blue[Improved strength and tone:] Regular swimming builds strength and muscle tone, promoting lean muscle development throughout the body.</li>
+                        <li> :blue[Increased flexibility:] The range of motion required in swimming improves flexibility and joint mobility.</li>
+                        <li> :blue[Weight management:] Swimming burns calories efficiently, aiding in weight loss and weight management goals. </li>
+                        <li> :blue[Enhanced lung capacity:] Swimming involves controlled breathing, helping to improve lung function and respiratory efficiency. </li>
+                        <li> :blue[Improved coordination and balance:] The rhythmic movements and coordination required in swimming enhance balance and body coordination.</li>
+                        <li> :blue[Rehabilitation and injury recovery:] Swimming is a gentle form of exercise often used in rehabilitation programs to aid in injury recovery and improve physical function.</li>
+                        <li> :blue[Suitable for all ages and fitness levels:] Swimming is an inclusive activity that can be enjoyed by people of all ages and varying fitness levels, from beginners to advanced athletes.</li>
+                    </ol>  
+                    Precautions of Swimming:
+                    <ol>
+                        <li> :red[Learn to swim:] It is essential to learn basic swimming skills and water safety techniques. Enroll in swimming lessons or seek guidance from a qualified instructor.</li>
+                        <li> :red[Swim in designated areas:]  Choose swimming locations that are designated as safe for swimming, such as public pools, supervised beaches, or designated swimming areas in natural bodies of water.</li>
+                        <li> :red[Observe water depth and conditions:] Be aware of the water depth and any potential hazards or currents present. Avoid swimming in unfamiliar or hazardous areas, including fast-flowing rivers, areas with submerged rocks, or locations with poor visibility.</li>
+                        <li> :red[Supervise children:]  Keep a close eye on children when they are swimming, and provide them with appropriate flotation devices or swimming aids based on their skill level. Children should always be supervised by a responsible adult near water.</li>
+                        <li> :red[Follow lifeguard instructions:] If swimming in an area with lifeguards, pay attention to their instructions and adhere to any posted signs or warnings.</li>
+                        <li> :red[Be aware of weather conditions:] Pay attention to weather forecasts before swimming, especially in open water. Avoid swimming during storms, high winds, or thunderstorms, as these conditions can pose significant risks.</li>
+                    </ol>
+                    </strong>""", unsafe_allow_html=True)
+    
+    @Rule(IndividualSportsType(individualSports_type='Workout'))
+    def Workout(self):
+        st.markdown("""<h3 style="text-align: center;">Workout</h3>""", unsafe_allow_html=True)
+        image = Image.open('images/images_sport/workout.jpg')
+        st.image(image, use_column_width=True)
+        st.markdown("""<strong style="text-style: bold; font-size: 20px;">A workout refers to a structured and intentional physical activity session aimed at improving fitness, strength, endurance, or overall health. Workouts can take various forms and can be customized based on individual goals, preferences, and fitness levels.
+                    During a workout, individuals engage in specific exercises or activities designed to target different muscle groups, elevate heart rate, and challenge the body physically. Workouts can be performed at home, in a gym, or outdoors, depending on the available equipment and personal preferences.
+                    <br><br>
+                    Advantages of Workout:
+                    <ol>
+                        <li> :blue[Improved physical fitness:] Regular exercise helps improve overall physical fitness by increasing strength, endurance, flexibility, and cardiovascular health. It enhances muscle tone, promotes weight management, and improves body composition.</li>
+                        <li> :blue[Increased energy levels:] Workouts stimulate the release of endorphins, which are natural chemicals that boost energy levels and improve mood. Regular exercise can leave you feeling more energized throughout the day.</li>
+                        <li> :blue[Weight management:] Exercise plays a crucial role in maintaining a healthy weight or achieving weight loss goals. Workouts burn calories, increase metabolism, and promote fat loss, contributing to weight management.</li>
+                        <li> :blue[Reduced risk of chronic diseases:] Regular physical activity reduces the risk of chronic diseases such as heart disease, type 2 diabetes, high blood pressure, and certain types of cancer. It helps maintain healthy blood pressure, cholesterol levels, and blood sugar regulation.</li>
+                        <li> :blue[Improved cognitive function:] Physical activity has been linked to improved cognitive function, memory, and focus. Regular workouts can enhance mental clarity, concentration, and overall brain health.</li>
+                        <li> :blue[Increased self-confidence:] Achieving fitness goals, improving physical abilities, and seeing progress in workouts can boost self-confidence and self-esteem. </li>
+                        <li> :blue[Social benefits:] Group workouts or gym sessions provide opportunities for social interaction and can help build a supportive fitness community. </li>
+                        <li> :blue[Longevity:] Regular exercise has been associated with increased longevity and a reduced risk of premature death.</li>
+                        <li> :blue[Stronger immune system:] Consistent workouts can boost the immune system, reducing the likelihood of getting sick or experiencing frequent infections.</li>
+                    </ol>  
+                    Precautions of Workout:
+                    <ol>
+                        <li> :red[Consult with a healthcare professional:] If you have any underlying health conditions or concerns, it's advisable to consult with a healthcare professional before starting a new workout program. They can provide guidance on exercises that are safe and appropriate for your specific situation.</li>
+                        <li> :red[Warm-up and cool-down:] Always begin your workout with a proper warm-up session to prepare your body for exercise. This can include light cardio exercises and dynamic stretching. Similarly, end your workout with a cool-down period to gradually bring your heart rate down and stretch your muscles.</li>
+                        <li> :red[Use proper form and technique:] Learn and practice correct form and technique for each exercise to prevent injuries. If you're unsure about how to perform an exercise correctly, consider working with a qualified fitness professional who can guide you.</li>
+                        <li> :red[Start gradually and progress slowly:] Start with lower intensity workouts and gradually increase the duration, intensity, or resistance over time. This allows your body to adapt and reduces the risk of overexertion or strain.</li>
+                        <li> :red[Listen to your body:] Pay attention to your body's signals during a workout. If you experience pain, dizziness, or unusual discomfort, stop exercising and seek medical advice if necessary. Pushing through severe pain can lead to injuries.</li>
+                        <li> :red[Use safety equipment:] If your workout involves activities like cycling, rollerblading, or weightlifting, wear appropriate safety equipment such as helmets, knee pads, or lifting belts to protect yourself from potential injuries.</li>
+                    </ol>
+                    </strong>""", unsafe_allow_html=True)
+        
+    @Rule(IndividualSportsType(individualSports_type='Cycling'))
+    def Cycling(self):
+        st.markdown("""<h3 style="text-align: center;">Cycling</h3>""", unsafe_allow_html=True)
+        image = Image.open('images/images_sport/cycling.jpg')
+        st.image(image, use_column_width=True)
+        st.markdown("""<strong style="text-style: bold; font-size: 20px;">Cycling is a popular activity and mode of transportation that involves riding a bicycle.It can be performed on various terrains, including roads, trails, mountains, and indoor cycling studios. Cyclists can choose from different types of bicycles, such as road bikes, mountain bikes, hybrid bikes, or stationary bikes, depending on their preferences and intended use.
+                    <br><br>
+                    Advantages of Workout:
+                    <ol>
+                        <li> :blue[Cardiovascular fitness:] Cycling is an excellent aerobic exercise that raises the heart rate, improves cardiovascular health, and strengthens the heart and lungs. Regular cycling helps enhance endurance and overall cardiovascular fitness.</li>
+                        <li> :blue[Low-impact exercise:] Cycling is a low-impact activity that puts less stress on the joints compared to high-impact exercises like running. It is suitable for individuals of different fitness levels, including those with joint issues or injuries.</li>
+                        <li> :blue[Muscle strength and tone:] Cycling engages multiple muscle groups, including the legs, thighs, calves, glutes, and core. Regular cycling helps strengthen and tone these muscles, leading to improved lower body strength and stability.</li>
+                        <li> :blue[Weight management:] Cycling is an effective calorie-burning exercise that can contribute to weight loss or weight management goals. The intensity and duration of cycling determine the number of calories burned during a ride.</li>
+                        <li> :blue[Mental well-being:] Cycling offers mental and emotional benefits. It can help reduce stress, improve mood, and boost mental clarity and focus. Cycling outdoors also allows for a connection with nature, which can have a positive impact on mental well-being.</li>
+                        <li> :blue[Joint mobility and flexibility:] Cycling involves a continuous range of motion, promoting joint mobility and flexibility. It helps maintain and improve joint health, especially in the knees, hips, and ankles.</li>
+                        <li> :blue[Environmental sustainability:] Cycling is an eco-friendly mode of transportation as it does not produce harmful emissions or contribute to traffic congestion. Choosing to cycle instead of using a motor vehicle helps reduce carbon footprint and supports a greener environment. </li>
+                        <li> :blue[Commuting and transportation:] Cycling can serve as an alternative mode of transportation, particularly for shorter distances. It offers convenience, promotes physical activity, and reduces reliance on motor vehicles, leading to cost savings and reduced traffic congestion.</li>
+                        <li> :blue[Social interaction and community:] Cycling can be a social activity, allowing individuals to ride in groups or join cycling clubs. It provides an opportunity to connect with like-minded individuals, participate in group rides, and explore new routes or trails together.</li>
+                        <li> :blue[Enjoyment and recreation:] Cycling can be a fun and enjoyable recreational activity, whether exploring scenic routes, going on cycling tours, or participating in organized cycling events or races.</li>
+                    </ol>  
+                    Precautions of Cycling:
+                    <ol>
+                        <li> :red[Wear a helmet:] Always wear a properly fitted helmet when cycling. A helmet can protect your head and reduce the risk of head injuries in case of a fall or collision.</li>
+                        <li> :red[Follow traffic rules:] Obey traffic laws and regulations when cycling on roads. Ride in the same direction as traffic, use hand signals to indicate turns, and follow traffic signals and signs.</li>
+                        <li> :red[Be visible:] Increase your visibility to motorists by wearing brightly colored or reflective clothing, especially when cycling in low-light conditions. Equip your bike with reflectors, lights, or strobes to ensure visibility to other road users.</li>
+                        <li> :red[Be aware of your surroundings:] Pay attention to your surroundings and anticipate potential hazards. Watch out for parked cars, opening car doors, potholes, debris, or other obstacles on the road or trail.</li>
+                        <li> :red[Maintain your bike:] Regularly inspect your bicycle for any mechanical issues, such as tire pressure, brake function, and chain condition. Ensure that all components are in proper working order before starting a ride.</li>
+                        <li> :red[Signal your intentions:] Use hand signals to indicate your intentions to other road users. Signal when turning, changing lanes, or stopping to ensure that motorists and pedestrians are aware of your actions.</li>
+                    </ol>
+                    </strong>""", unsafe_allow_html=True)
+        
+    
+        
+        
+        
+        

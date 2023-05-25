@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from rules.sports_tab_rules import TeamSportsType, TeamSports 
+from rules.sports_tab_rules import TeamSportsType, TeamSports, IndividualSportsType, IndividualSports
 
 def app():
 
@@ -21,5 +21,15 @@ def app():
         engine = TeamSports()
         engine.reset()
         engine.declare(TeamSportsType(teamSports_type=Sports))
+        engine.run()
+
+    if selected == "Individual Sports":
+        st.markdown("""<h1 style="text-align: center;">Individual Sports</h1>""", unsafe_allow_html=True)
+        Sports = st.selectbox(" ", ["Swimming","Workout","Cycling"])
+        
+        # Run the Team Sports engine
+        engine = IndividualSports()
+        engine.reset()
+        engine.declare(IndividualSportsType(individualSports_type=Sports))
         engine.run()
         
