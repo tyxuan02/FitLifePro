@@ -1,5 +1,5 @@
 import streamlit as st
-from rules.home_tab_rules import Gender, Age, Weight, Height, Lifestyle, CalculateIntake
+from rules.home_tab_rules import Gender, Age, Weight, Height, Lifestyle, CalculateIntake, BMITableEngine, BMITable, HealthTips, HealthTipsEngine
 
 def app():
     # Insert Home Tab code here
@@ -14,12 +14,14 @@ def app():
         lifestyle = st.selectbox("Lifestyle: ", ["Sedentary (little to no exercise)", "Lightly Active (light exercise/sports 1-3 days per week)", "Moderately Active (moderate exercise/sports 3-5 days per week)", "Very Active (hard exercise/sports 6-7 days per week)", "Extra active (very hard exercise/sports and a physical job)"])
         enter = st.button("Enter")
 
-    st.markdown("""<h1 style="text-align: center;">RESULT</h1>""", unsafe_allow_html=True)
+    st.markdown("""<h1 style="text-align: center;">Result</h1>""", unsafe_allow_html=True)
     st.markdown("""---""", unsafe_allow_html=True)
+    fill_in = st.markdown("""<h4 style="text-align: center; color: red">Please fill in the form on the left to get your results 😊</h4>""", unsafe_allow_html=True)
 
     if enter:
         if name:
-            st.markdown("""<h4>Name: {}</h4>""".format(name), unsafe_allow_html=True)
+            fill_in.empty()
+            st.markdown("""<h2 style="text-align: center;">Hi {}! Here are your results:</h2>""".format(name), unsafe_allow_html=True)
             st.markdown("""<h4>Age: {}</h4>""".format(age), unsafe_allow_html=True)
             st.markdown("""<h4>Gender: {}</h4>""".format(gender), unsafe_allow_html=True)
             st.markdown("""<h4>Height: {} cm</h4>""".format(height), unsafe_allow_html=True)
@@ -37,10 +39,26 @@ def app():
             engine.run()
         else:
             st.markdown("""<h4 style="text-align: center; color: red;">Please Enter Your Name 😊</h4>""", unsafe_allow_html=True)
+        
+    st.markdown("""---""", unsafe_allow_html=True)
+    st.markdown("""<h1 style="text-align: center;">Health Tips</h1>""", unsafe_allow_html=True)
+    st.markdown("""---""", unsafe_allow_html=True)
+        
+    engine = HealthTipsEngine()
+    engine.reset()
+    engine.declare(HealthTips())
+    engine.run()
+  
+
+    st.markdown("""---""", unsafe_allow_html=True)
+    st.markdown("""<h1 style="text-align: center;">Body Mass Index (BMI) Table</h1>""", unsafe_allow_html=True)
+
+    engine = BMITableEngine()
+    engine.reset()
+    engine.declare(BMITable())
+    engine.run()
 
 
 
-
-    # (Extra: maybe can have a table to show the BMI range)
     # Food suggestions (Extra: meal plan)
     # Health tips (does not depend on user's input)
