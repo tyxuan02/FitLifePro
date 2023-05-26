@@ -1,5 +1,5 @@
 # WID2001 - FitLifePro Expert System
-Building an Expert System on Python with Streamlit
+FitLifePro is an expert system created by a group of AI students from University of Malaya as a group project for WID2001 (Knowledge Representation and Reasoning) course. This expert system is created using Python and Streamlit. The purpose of this expert system is to provide some general knowledge about fitness, health, sports and injury to users. 
 
 # How to run
 1. Use Python 3.8 or below to run (Download Python 3.8 here: https://www.python.org/ftp/python/3.8.0/python-3.8.0-amd64.exe and edit the PATH in Environment Variables by following this guide: https://www.youtube.com/watch?v=lezhrFdVSVY)
