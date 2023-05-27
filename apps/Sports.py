@@ -25,7 +25,7 @@ def app():
 
     if selected == "Individual Sports":
         st.markdown("""<h1 style="text-align: center;">Individual Sports</h1>""", unsafe_allow_html=True)
-        Sports = st.selectbox(" ", ["Swimming","Workout","Cycling"])
+        Sports = st.selectbox(" ", ["Swimming","Workout","Cycling","Jogging","Hiking","Martial arts","Archery","Skiing","Diving"])
         
         # Run the Team Sports engine
         engine = IndividualSports()
