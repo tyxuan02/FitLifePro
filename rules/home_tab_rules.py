@@ -30,8 +30,8 @@ class CalorieIntake(Fact):
     """Info about the user's required calorie intake"""
     pass
 
-# Rules for BMI
 class CalculateIntake(KnowledgeEngine):
+    # Rules for BMI
     @Rule(Weight(weight=MATCH.weight), Height(height=MATCH.height), salience=10)
     def calculate_BMI(self, weight, height):
         BMI_result = weight / (height/100)**2
@@ -45,6 +45,7 @@ class CalculateIntake(KnowledgeEngine):
         else:
             st.markdown("""<h4 style:"display: inline;">BMI: {:.2f} <span style="color: red;">(You are obese)</span></h4>""".format(BMI_result), unsafe_allow_html=True)
     
+    # Rules for BMR
     @Rule(Weight(weight=MATCH.weight), Height(height=MATCH.height), Age(age = MATCH.age), Gender(gender=MATCH.gender), salience=9)
     def calculate_BMR(self, weight, height, age, gender):
         if gender == "Male":
@@ -98,15 +99,15 @@ class CalculateIntake(KnowledgeEngine):
     @Rule(Weight(weight=MATCH.weight), Lifestyle(lifestyle=MATCH.lifestyle), salience=6)
     def calculate_water(self, weight, lifestyle):
         if lifestyle == "Sedentary (little to no exercise)":
-            WaterIntake = weight * 0.025
-        elif lifestyle == "Lightly Active (light exercise/sports 1-3 days per week)":
-            WaterIntake = weight * 0.03
-        elif lifestyle == "Moderately Active (moderate exercise/sports 3-5 days per week)":
-            WaterIntake = weight * 0.035
-        elif lifestyle == "Very Active (hard exercise/sports 6-7 days per week)":
             WaterIntake = weight * 0.04
+        elif lifestyle == "Lightly Active (light exercise/sports 1-3 days per week)":
+            WaterIntake = weight * 0.042
+        elif lifestyle == "Moderately Active (moderate exercise/sports 3-5 days per week)":
+            WaterIntake = weight * 0.048
+        elif lifestyle == "Very Active (hard exercise/sports 6-7 days per week)":
+            WaterIntake = weight * 0.052
         else:
-            WaterIntake = weight * 0.045
+            WaterIntake = weight * 0.056
         
         st.markdown("""<h4>Required Water Intake: {:.2f} L/day</h4>""".format(WaterIntake), unsafe_allow_html=True)
 

@@ -466,7 +466,7 @@ class IndividualSports(KnowledgeEngine):
                 <li><span style="color:red;"><strong>Dive planning and safety procedures:</span> Plan dives within your training and experience level. Consider factors such as depth, currents, visibility, and dive duration. Follow proper safety procedures, including buddy diving, pre-dive checks, and adherence to decompression limits.</strong></li>
                 <li><span style="color:red;"><strong>Underwater communication:</span> Learn and utilize proper underwater communication techniques, such as hand signals, to communicate effectively with your dive partner or group. Clear communication enhances safety and ensures a shared understanding during the dive.</strong></li>
                 <li><span style="color:red;"><strong>Equalization and ascent rates:</span> Properly equalize your ears and sinuses to relieve pressure changes during descent. Ascend slowly and maintain proper ascent rates to minimize the risk of decompression sickness.</strong></li>
-                <li><span style="color:red;"><strong>Environmental awareness:</span> Respect the underwater environment and follow responsible diving practices. Avoid touching or damaging marine life, refrain from littering, and adhere to local regulations and conservation efforts./strong></li>
+                <li><span style="color:red;"><strong>Environmental awareness:</span> Respect the underwater environment and follow responsible diving practices. Avoid touching or damaging marine life, refrain from littering, and adhere to local regulations and conservation efforts.</strong></li>
             </ol>
             """,
             unsafe_allow_html=True
