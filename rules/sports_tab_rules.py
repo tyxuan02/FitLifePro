@@ -94,7 +94,68 @@ class TeamSports(KnowledgeEngine):
                         <li> :red[Scoring:] A goal is scored when the ball completely crosses the goal line between the goalposts and under the crossbar. The team with the most goals at the end of the game wins.</li>
                     </ol>
                     </strong>""", unsafe_allow_html=True)
+    
+    @Rule(TeamSportsType(teamSports_type='Baseball'))
+    def Baseball(self):
+        st.markdown("""<h3 style="text-align: center;">Baseball</h3>""", unsafe_allow_html=True)
+        image = Image.open('images/images_sport/baseball.jpg')
+        st.image(image, use_column_width=True)
+        st.markdown("""<strong style="text-style: bold; font-size: 20px;">Baseball is a popular sport that is played between two teams consisting of nine players each. 
+                    The objective of baseball is for one team to score more runs than the opposing team within a designated number of innings. 
+                    A run is scored when a player successfully completes a circuit around four bases: first base, second base, third base, and finally home plate.
+                    The team that is on offense tries to score runs by hitting the ball and running around the bases, while the team on defense attempts to prevent the offense from scoring by fielding the ball and making outs.
+                    <br><br>
+                    Rules and regulation of Baseball:
+                    <ol>
+                        <li> :red[Playing Field:] Baseball is played on a diamond-shaped field, with four bases positioned at the corners. The distance between each base is 90 feet (27.4 meters). The outfield, beyond the bases, is typically covered in grass. </li>
+                        <li> :red[Innings:] A baseball game consists of nine innings, with each team getting a turn to bat and a turn to field. If the game is tied after nine innings, extra innings are played until there is a winner. </li>
+                        <li> :red[Batting:] The batting team sends one player, known as the batter, to the home plate. The pitcher from the opposing team throws the ball towards the batter, who tries to hit it into the field of play. The batter must stay within the batter's box while attempting to hit the ball. </li>
+                        <li> :red[Strikes, Balls, and Outs:] The pitcher throws pitches, and the batter aims to hit them. If the batter swings and misses, it's called a strike. If the batter doesn't swing, but the pitch is within the strike zone (the area over home plate between the batter's shoulders and knees), it's also called a strike. If the batter receives four balls (pitches outside the strike zone), they are awarded a walk and advance to first base. </li>
+                        <li> :red[Scoring:] A run is scored when a base runner successfully touches all four bases, including home plate, without being put out. The team with the most runs at the end of the game wins. </li>
+                        <li> :red[Base Running:] After hitting the ball, the batter becomes a base runner and must run counterclockwise around the bases. Runners can be tagged out by fielders holding the ball and touching the runner before they reach a base. Runners can also be forced out if a fielder touches the base before they arrive, and there are no other bases available.</li>
+                        <li> :red[Foul Territory: ] The area outside the foul lines, extending beyond the first and third baselines and beyond the outfield fences, is called foul territory. If a batter hits the ball into foul territory, it's a foul ball, and generally, the count remains unchanged. However, if a foul ball is caught by a fielder before touching the ground, the batter is out. </li>
+                    </ol>
+                    </strong>""", unsafe_allow_html=True)
+        
+    @Rule(TeamSportsType(teamSports_type='Volleyball'))
+    def Volleyball(self):
+        st.markdown("""<h3 style="text-align: center;">Volleyball</h3>""", unsafe_allow_html=True)
+        image = Image.open('images/images_sport/volleyball.jpg')
+        st.image(image, use_column_width=True)
+        st.markdown("""<strong style="text-style: bold; font-size: 20px;">Volleyball is a team sport played by two teams on a rectangular court separated by a net. 
+                    It is a fast-paced and dynamic game that involves players using their hands or arms to hit a ball over the net, with the objective of scoring points and preventing the opposing team from doing the same.
+                    <br><br>
+                    Rules and regulation of Volleyball:
+                    <ol>
+                        <li> :red[Scoring:] The objective of volleyball is to score points by making the ball touch the ground within the opponent's court or by forcing the opponent into an error. A team scores a point if they successfully ground the ball on the opponent's court or if the opposing team commits a fault. The first team to reach 25 points (with a two-point advantage) wins the set. Matches are typically best-of-five sets. </li>
+                        <li> :red[Serve:]The game begins with a serve, where a player from behind the end line serves the ball into the opponent's court. The server must hit the ball over the net and into the receiving team's court. The serve must clear the net and land within the boundaries of the court. </li>
+                        <li> :red[Rally:] After the serve, the teams engage in a rally, where the ball is played back and forth between them. Each team has a maximum of three touches to return the ball over the net. Typical techniques include a forearm pass (bump), overhead pass (set), or an attacking hit. </li>
+                        <li> :red[Ball In Play:] The ball is in play from the moment it is served until it lands out of bounds, hits an obstruction, or a fault is committed. Players must avoid touching the net, stepping over the centerline, or committing other violations to keep the ball in play. </li>
+                        <li> :red[Libero:] In international and advanced-level volleyball, teams can utilize a libero player who specializes in defensive skills. The libero wears a different-colored jersey and has specific rules, such as being limited to back-row play and not being allowed to serve, attack the ball above the net, or rotate to the front row. </li>
+                        <li> :red[Faults and Violations:] Various faults and violations can occur during a game, resulting in points awarded to the opposing team. These include serving into the net, hitting the ball out of bounds, touching the net, double-touching the ball, and committing foot faults while serving.</li>
+                        <li> :red[Substitutions:] Teams are allowed to make substitutions during the game, typically during dead ball situations. Substituted players may replace the serving player or take other positions on the court. </li>
+                    </ol>
+                    </strong>""", unsafe_allow_html=True)
 
+    @Rule(TeamSportsType(teamSports_type='Handball'))
+    def Handball(self):
+        st.markdown("""<h3 style="text-align: center;">Handball</h3>""", unsafe_allow_html=True)
+        image = Image.open('images/images_sport/handball.jpg')
+        st.image(image, use_column_width=True)
+        st.markdown("""<strong style="text-style: bold; font-size: 20px;">Handball is a fast-paced team sport played between two teams of seven players each, with six outfield players and one goalkeeper. 
+                    The objective of handball is to score goals by throwing the ball into the opponent's goal while preventing the opposing team from doing the same. 
+                    <br><br>
+                    Rules and regulation of Handball:
+                    <ol>
+                        <li> :red[Scoring:] The objective of handball is to score goals. A goal is scored when the ball completely crosses the goal line, between the goalposts and below the crossbar, without any rule violations. The team that scores the most goals within the designated time wins the match. </li>
+                        <li> :red[Duration of the Game:] A handball match is typically played in two halves of 30 minutes each, with a 10 to 15-minute halftime break. However, the duration can vary based on the level of play and competition. If the game ends in a draw, it may go into overtime or a shootout to determine the winner. </li>
+                        <li> :red[Ball Possession:] The team in possession of the ball tries to move it towards the opponent's goal through passes, dribbling, and player movement. Players can hold the ball for a maximum of three seconds before they must pass, bounce, or shoot it. Dribbling is allowed, similar to basketball, but contact with the floor should be made alternately with each hand. </li>
+                        <li> :red[Passing:] Players can pass the ball to their teammates using various throwing techniques, such as overhead passes, bounce passes, or sidearm throws. However, players are not allowed to hold the ball for more than three steps or three seconds without dribbling or releasing it. </li>
+                        <li> :red[Fouls and Penalties:] Handball has rules to prevent unfair play and ensure player safety. Fouls can result from actions such as holding, pushing, tripping, or charging into opponents. When a foul is committed, the opposing team is awarded a free throw or a penalty throw, depending on the severity and location of the foul. </li>
+                        <li> :red[Goalkeeper: ] The goalkeeper has a unique role in handball, positioned in front of the goal to block shots. They have additional privileges and restrictions compared to outfield players. For example, goalkeepers can touch the ball with any part of their body within the goal area, and they can participate in the game as an outfield player beyond that area. </li>
+                        <li> :red[Substitutions:] Teams are allowed to make substitutions during the game, typically during breaks in play or stoppages. Substituted players enter and exit the game through a designated substitution area on the sideline, ensuring a smooth flow of the game. </li>
+                    </ol>
+                    </strong>""", unsafe_allow_html=True)
 
 # Individual Sports Knowledge Engine
 class IndividualSports(KnowledgeEngine):
