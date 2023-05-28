@@ -57,8 +57,3 @@ def app():
     engine.reset()
     engine.declare(BMITable())
     engine.run()
-
-
-
-    # Food suggestions (Extra: meal plan)
-    # Health tips (does not depend on user's input)
