@@ -8,4 +8,3 @@ FitLifePro is an expert system created by a group of AI students from University
 
 # Run it on Streamlit
 https://tyxuan02-fitlifepro-main-mzmcr7.streamlit.app/
-
