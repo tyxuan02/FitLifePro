@@ -26,7 +26,6 @@ class CommonInjury(KnowledgeEngine):
         st.markdown("""<strong style="text-style: bold; font-size: 20px;">Strains refer to injuries that involve the overstretching or tearing of muscles or tendons. Tendons are thick, fibrous cords of tissue that connect muscles to bones. Strains often occur when muscles or tendons are subjected to sudden or 
         excessive stretching or forced contraction. Activities involving repetitive motions, improper technique, or insufficient warm-up can increase the risk of strains. Symptoms of a strain may include pain, muscle weakness, swelling, and difficulty 
         moving the affected muscle or joint.</strong>""", unsafe_allow_html=True)
-        image = Image.open('images/strain.jpg')
 
     @Rule(InjuryType(injury_type='Knee Injury'))
     def knee_injury(self):
@@ -114,8 +113,9 @@ class Treatment(KnowledgeEngine):
         st.markdown("""<h2 style="text-align: center;">First Aid for Sprains, Strains and Joint Injuries</h2>""", unsafe_allow_html=True)
         image = Image.open('images/images_injury/first-aid-for-sprains-strains-and-joint-injuries.png')
         st.image(image, use_column_width=True)
-        st.markdown("""<strong style="text-style: bold; font-size: 20px;"><span style="color: red;">R.I.C.E</span> method. This treatment method is helpful for mild sports injuries. For best results, follow the RICE method within the first 24 to 36 hours after the injury. It can help reduce swelling 
-        and prevent additional pain and bruising in the early days after a sports injury.
+        st.markdown("""<strong style="text-style: bold; font-size: 20px;"><span style="color: red;">R.I.C.E</span> method. 
+        This treatment method is helpful for mild sports injuries. For best results, follow the RICE method within the first 24 to 36 hours after the injury. 
+        It can help reduce swelling and prevent additional pain and bruising in the early days after a sports injury.
         <br><br>
         Here's the step-by-step guide on the RICE method:
         <br>

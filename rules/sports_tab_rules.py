@@ -19,19 +19,25 @@ class TeamSports(KnowledgeEngine):
         image = Image.open('images/images_sport/football.jpeg')
         st.image(image, use_column_width=True)
         st.markdown("""<strong style="text-style: bold; font-size: 20px;">Football is the world's most popular team sport. It is played between two teams, each consisting of 11 players,
-                    on a rectangular field. The objective of the game is to score goals by maneuvering a spherical ball into the opponent's goal, while defending one's own goal to prevent the opposing team from scoring. 
-                    Football is known for its fast pace, skillful dribbling, precise passing, and strategic teamwork.
+                    on a rectangular field. The objective of the game is to score goals by maneuvering a spherical ball into the opponent's goal, while defending one's own goal to prevent the 
+                    opposing team from scoring. Football is known for its fast pace, skillful dribbling, precise passing, and strategic teamwork.
                     <br><br>
                     Rules and regulation of Football:
                     <ol>
                         <li > :red[Number of players:] A team consists of 11 players, including one goalkeeper.</li>
                         <li> :red[Duration of the Game:] The game is typically divided into two halves of 45 minutes each, with a halftime break of 15 minutes.</li>
-                        <li> :red[Offside Rule:] A player is considered offside if they are nearer to the opponent's goal line than both the ball and the second-last defender when the ball is played to them.</li>
-                        <li> :red[Fouls and Misconduct:] There are various fouls and misconduct that can occur during a game, such as tripping, pushing, holding, or using excessive force against an opponent. The referee may award free kicks, penalty kicks, or issue yellow or red cards depending on the severity of the offense.</li>
-                        <li> :red[Penalties:] Penalties can be awarded for serious fouls or misconduct committed inside the penalty area. A penalty kick is taken from the penalty spot, 12 yards from the goal line, with only the goalkeeper defending the goal.</li>
-                        <li> :red[Throw-in:] When the ball goes out of play over the touchline, a throw-in is awarded to the opposing team. The throw-in must be taken with both hands from behind and over the head. </li>
-                        <li> :red[Goal Kick:] When the attacking team last touches the ball before it crosses the goal line, a goal kick is awarded to the defending team. The defending team's goalkeeper takes a kick from within the six-yard box. </li>
-                        <li> :red[Corner Kick:] When the defending team last touches the ball before it crosses the goal line, a corner kick is awarded to the attacking team. The ball is placed in the corner arc nearest to where it went out of play and is kicked into play.</li>
+                        <li> :red[Offside Rule:] A player is considered offside if they are nearer to the opponent's goal line than both the ball and the second-last defender when 
+                        the ball is played to them.</li>
+                        <li> :red[Fouls and Misconduct:] There are various fouls and misconduct that can occur during a game, such as tripping, pushing, holding, or using excessive 
+                        force against an opponent. The referee may award free kicks, penalty kicks, or issue yellow or red cards depending on the severity of the offense.</li>
+                        <li> :red[Penalties:] Penalties can be awarded for serious fouls or misconduct committed inside the penalty area. A penalty kick is taken from the penalty spot, 
+                        12 yards from the goal line, with only the goalkeeper defending the goal.</li>
+                        <li> :red[Throw-in:] When the ball goes out of play over the touchline, a throw-in is awarded to the opposing team. The throw-in must be taken with both hands from behind 
+                        and over the head. </li>
+                        <li> :red[Goal Kick:] When the attacking team last touches the ball before it crosses the goal line, a goal kick is awarded to the defending team. 
+                        The defending team's goalkeeper takes a kick from within the six-yard box. </li>
+                        <li> :red[Corner Kick:] When the defending team last touches the ball before it crosses the goal line, a corner kick is awarded to the attacking team. 
+                        The ball is placed in the corner arc nearest to where it went out of play and is kicked into play.</li>
                     </ol>
                     </strong>""", unsafe_allow_html=True)
     
@@ -47,9 +53,20 @@ class TeamSports(KnowledgeEngine):
                     Rules and regulation of Basketball:
                     <ol>
                         <li> :red[Teams:] The positions typically include point guard, shooting guard, small forward, power forward, and center. </li>
-                        <li> :red[Gameplay:] The game begins with a tip-off, where the referee throws the ball up into the air and two opposing players attempt to tap it to their teammates. The team in possession of the ball aims to advance it towards their opponent's hoop through dribbling (bouncing the ball while moving) and passing. Players can move the ball by dribbling, passing, or shooting. However, they must follow certain rules, such as dribbling violations (double dribble, carrying, etc.) and traveling (taking too many steps without dribbling). The shot clock is a timer that requires the offensive team to attempt a shot within a certain time limit (usually 24 seconds in professional basketball). Scoring can be done by shooting the ball into the opponent's hoop. A made basket inside the three-point line is worth two points, while a shot from beyond the three-point line counts for three points. Free throws are awarded for certain fouls and are worth one point each.</li>
-                        <li> :red[Fouls and Violations:] Basketball has various fouls and violations that are penalized by the referees. Personal fouls include illegal physical contact, such as pushing, holding, or tripping an opponent. If a player commits too many fouls, they may be disqualified from the game. Technical fouls are given for unsportsmanlike behavior, such as arguing with the officials or using abusive language. Violations include traveling (taking too many steps without dribbling), double dribble (dribbling with both hands simultaneously), and shot clock violations, among others.</li>
-                        <li> :red[Duration of the Game:] A standard basketball game consists of four quarters, each lasting 12 minutes in the NBA (National Basketball Association). In international competitions and some other leagues, the game may have different durations. If the game ends in a tie, additional periods of play, known as overtime, are added until a winner is determined.</li>
+                        <li> :red[Gameplay:] The game begins with a tip-off, where the referee throws the ball up into the air and two opposing players attempt 
+                        to tap it to their teammates. The team in possession of the ball aims to advance it towards their opponent's hoop through dribbling (bouncing the ball while moving) and passing. 
+                        Players can move the ball by dribbling, passing, or shooting. However, they must follow certain rules, such as dribbling violations (double dribble, carrying, etc.) 
+                        and traveling (taking too many steps without dribbling). The shot clock is a timer that requires the offensive team to attempt a shot within a certain 
+                        time limit (usually 24 seconds in professional basketball). Scoring can be done by shooting the ball into the opponent's hoop. A made basket inside the 
+                        three-point line is worth two points, while a shot from beyond the three-point line counts for three points. Free throws are awarded for certain fouls and 
+                        are worth one point each.</li>
+                        <li> :red[Fouls and Violations:] Basketball has various fouls and violations that are penalized by the referees. Personal fouls include illegal physical contact, 
+                        such as pushing, holding, or tripping an opponent. If a player commits too many fouls, they may be disqualified from the game. Technical fouls are given for 
+                        unsportsmanlike behavior, such as arguing with the officials or using abusive language. Violations include traveling (taking too many steps without dribbling), 
+                        double dribble (dribbling with both hands simultaneously), and shot clock violations, among others.</li>
+                        <li> :red[Duration of the Game:] A standard basketball game consists of four quarters, each lasting 12 minutes in the NBA (National Basketball Association). 
+                        In international competitions and some other leagues, the game may have different durations. If the game ends in a tie, additional periods of play, known as overtime, are 
+                        added until a winner is determined.</li>
                     </ol>
                      </strong>""", unsafe_allow_html=True)
         
